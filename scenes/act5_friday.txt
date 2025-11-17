@@ -1,0 +1,84 @@
+*label act5_friday
+
+Friday morning greets you with a sense of anticipation. After Thursday’s experiment, you’re eager to see whether your rhythm-based task assignments have paid off. 
+
+The office feels different today—quieter, more purposeful. Lina is sketching furiously in the early morning light, her energy at its peak. Jasper arrives later than usual but immediately dives into coding with a focused intensity. Amara is calmly analyzing data as always, and Theo flits between tasks, helping wherever needed.  
+
+*choice
+    #Conduct a full team review first thing in the morning to check progress.
+        You gather everyone. "Let’s go through the current status of each task," you say. 
+        *set project_success %+5
+        *set relationships_all %+2
+        *goto morning_review
+    #Observe silently and let the team work independently.
+        You sit back, watching quietly. Each member seems to naturally gravitate toward their peak productivity. 
+        *set project_success %+7
+        *set relationships_all %+3
+        *goto morning_review
+    #Push everyone to accelerate, emphasizing urgency over rhythm.
+        "We’re behind schedule! Everyone, step it up!" you call out. Tension rises immediately. 
+        *set project_success %-10
+        *set relationships_all %-5
+        *goto morning_review
+
+*label morning_review
+
+The team presents their progress. Patterns are clear:  
+
+- Lina’s early morning work has produced several creative prototypes, all of high quality.  
+- Jasper’s tasks completed late last night show brilliance, but minor bugs remain.  
+- Amara’s analysis is thorough, consistent, and accurate.  
+- Theo has been a flexible support, adjusting to whichever tasks needed reinforcement.  
+
+However, the first signs of friction are visible. Some team members feel their schedules are unfairly shifted; others worry about accountability.  
+
+*choice
+    #Address concerns openly and reassure the team that rhythm-based schedules benefit everyone.
+        "I know this is different from the usual schedule," you say. "But it’s tailored to maximize each of our strengths. If we continue like this, we can finish ahead of time." 
+        *set project_success %+5
+        *set relationships_all %+5
+        *goto afternoon_pushback
+    #Ignore complaints and focus only on progress metrics.
+        "Let’s stick to results," you reply, dismissing concerns. The tension lingers but work continues. 
+        *set project_success %-5
+        *set relationships_all %-3
+        *goto afternoon_pushback
+    #Compromise by letting team members slightly adjust their hours.
+        "We’ll make small adjustments for fairness, but keep tasks aligned with your peak energy," you suggest. 
+        *set project_success %+3
+        *set relationships_all %+4
+        *goto afternoon_pushback
+
+*label afternoon_pushback
+
+By mid-afternoon, you see the results of your strategy:  
+
+- Lina is energized and proud of her early contributions.  
+- Jasper is producing high-quality code but notes he sometimes feels rushed by early check-ins.  
+- Amara remains calm, productive, and slightly amused by the human energy experiment unfolding around her.  
+- Theo is adapting, noting patterns and making suggestions for efficiency improvements.  
+
+You feel a mix of relief and pride—your approach is working, but not perfectly. Some team members still need minor adjustments for optimal performance.  
+
+*choice
+    #Hold a short debrief to collect feedback on the new workflow.
+        "Let’s discuss what’s working and what isn’t," you propose. Team members offer suggestions, giving you insight for fine-tuning. 
+        *set project_success %+5
+        *set relationships_all %+3
+        *goto end_of_friday
+    #End the day early, trusting the current rhythm alignment.
+        You decide to end the day slightly early. The team appreciates the trust, boosting morale. 
+        *set project_success %+7
+        *set relationships_all %+4
+        *goto end_of_friday
+    #Micromanage the final tasks of the day to ensure completeness.
+        You hover over the team, checking every detail. Progress is made, but stress levels rise. 
+        *set project_success %-5
+        *set relationships_all %-5
+        *goto end_of_friday
+
+*label end_of_friday
+
+As the workday closes, you feel a growing sense of understanding. The team’s rhythms are becoming clearer, and your role as leader is shifting—from manager of hours to orchestrator of energy. The final push over the weekend will test both your own rhythm and your ability to synchronize the team completely.  
+
+*finish

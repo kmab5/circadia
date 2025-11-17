@@ -1,0 +1,84 @@
+*label act4_thursday
+
+Thursday morning greets you with a quiet office. After yesterday’s realizations, you feel more in tune with the rhythms of your team. Today is the day to put your insights into practice. The success of the project may depend on your ability to assign the right tasks at the right time.  
+
+You glance around: Lina is already sketching early concepts, Jasper is slowly stirring, Amara is reviewing data, and Theo is hopping between tasks, observing everything.  
+
+*choice
+    #Start the day by assigning tasks according to each person’s energy peaks.
+        You pull out a schedule chart. "Lina, focus on early creative work. Jasper, your deep coding comes tonight. Amara, steady analytical work midday. Theo, assist wherever flexibility is needed." 
+        *set project_success %+10
+        *set relationships_lina %+5
+        *set relationships_jasper %+5
+        *set relationships_amara %+5
+        *set relationships_theo %+5
+        *goto morning_tasks
+    #Let each team member choose their own schedule.
+        "I trust everyone to manage their own time," you announce. "Do what feels most productive." 
+        *set project_success %+5
+        *set relationships_all %+3
+        *goto morning_tasks
+    #Stick to the traditional schedule to test if structure alone works.
+        "We follow the original calendar," you decide. "Consistency is key." 
+        *set project_success %-5
+        *set relationships_all %-3
+        *goto morning_tasks
+
+*label morning_tasks
+
+Lina dives into her sketches with energy and focus. Her early morning peak is clear; her work is crisp and innovative. Jasper struggles at first, but the thought of his evening coding assignment keeps him calm. Amara quietly immerses herself in the steady flow of analysis, while Theo adapts smoothly to whichever task you point him toward.  
+
+*choice
+    #Check in frequently to monitor progress.
+        You circulate the office, giving guidance and encouragement. Team members respond positively to your attention. 
+        *set project_success %+5
+        *set relationships_all %+2
+        *goto afternoon_tasks
+    #Allow everyone to work uninterrupted, trusting the rhythm-based assignments.
+        You sit back and observe silently. Your trust allows the team to focus fully. 
+        *set project_success %+7
+        *set relationships_all %+3
+        *goto afternoon_tasks
+    #Micromanage the tasks despite rhythm alignment.
+        You hover over everyone, giving instructions every few minutes. The team grows tense under your watch. 
+        *set project_success %-5
+        *set relationships_all %-5
+        *goto afternoon_tasks
+
+*label afternoon_tasks
+
+By mid-afternoon, the office hums with energy, each member in their natural rhythm window. You note the differences:  
+
+- Lina finishes multiple creative drafts in record time.  
+- Jasper’s coding notes are precise but incomplete; his peak is still coming tonight.  
+- Amara’s data analyses are flawless, steady, and reliable.  
+- Theo adapts, filling gaps and supporting wherever the flow is weakest.  
+
+You feel the first sense that aligning work with energy peaks is not just theory—it works.
+
+*choice
+    #Assign Jasper his most challenging coding task for the night.
+        "Jasper, tackle the core algorithm tonight when your focus peaks," you tell him. He nods eagerly. 
+        *set project_success %+10
+        *set relationships_jasper %+5
+        *goto evening_reflection
+    #Push Jasper to complete tasks this afternoon instead.
+        "Jasper, I need this finished before I leave," you insist. He frowns, clearly stressed. 
+        *set project_success %-5
+        *set relationships_jasper %-5
+        *goto evening_reflection
+    #Split Jasper’s tasks between now and later, easing pressure.
+        "Do what you can now, the rest tonight," you suggest. He smiles, relieved. 
+        *set project_success %+5
+        *set relationships_jasper %+3
+        *goto evening_reflection
+
+*label evening_reflection
+
+As the sun sets, the office begins to empty. The prototype is taking shape, and for the first time, you feel confident. The day’s experiment has taught you that understanding each person’s internal clock isn’t just helpful—it’s essential.  
+
+Theo comes by your desk. "See? Timing is everything," he says with a grin. "You’re starting to run on the team’s clock, not just the calendar."
+
+You lean back, reflecting on the experiment. Tomorrow will test whether your rhythm assignments have actually improved efficiency, or if hidden issues still linger.  
+
+*finish

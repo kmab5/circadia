@@ -1,0 +1,75 @@
+*label act7_sunday
+
+Sunday morning arrives. The office is quiet, the city just waking up. After a week of adjusting schedules, observing energy patterns, and experimenting with rhythms, everything comes down to today. The prototype must be finalized, polished, and delivered.
+
+You glance at your team: Lina is bright-eyed early, Jasper will peak later tonight, Amara works steadily, and Theo is adaptable as ever. You realize that every decision you made this week—from recognizing individual peaks to aligning your own energy—has built toward this moment.
+
+*choice
+    #Conduct a final morning check-in to align everyone.
+        You gather the team and go over final tasks. Everyone nods, confident in their assignments and rhythms. 
+        *set project_success %+5
+        *goto deliver_project
+    #Let the team work independently based on established rhythms.
+        You trust the system you’ve built. The team disperses, each member focused on their peak tasks. 
+        *set project_success %+7
+        *goto deliver_project
+    #Push the team for last-minute perfection, ignoring rhythms.
+        "We need everything flawless now!" you call. Some team members respond, but others show fatigue and frustration. 
+        *set project_success %-10
+        *set relationships_all %-5
+        *goto deliver_project
+
+*label deliver_project
+
+The day passes in a flurry of activity. You navigate the office, mentor, code, analyze, and coordinate, carefully balancing tasks with everyone’s natural rhythm. Theo adapts seamlessly, Amara keeps the project steady, Lina produces her best creative work, and Jasper finally delivers complex code during his peak hours.  
+
+As evening comes, the prototype is complete. You step back and take a deep breath, evaluating the results. The success of the project, the harmony of the team, and your own alignment all converge in this final moment.
+
+*if (project_success >= 75)
+    *goto flawless_delivery
+*elseif (project_success >= 50)
+    *goto good_delivery
+*elseif (project_success >= 25)
+    *goto bad_delivery
+*else
+    *goto disaster_delivery
+
+*label flawless_delivery
+
+[b]Flawless Delivery[/b]
+
+The prototype is delivered ahead of schedule, exceeding all expectations. The client is ecstatic, praising both the product and the evident cohesion of the team. Your leadership, tuned to the rhythms of each individual, has turned a stressful week into a triumph.  
+
+Team members thank you sincerely, and a sense of pride radiates throughout the office. You’ve learned that timing, empathy, and observation are as critical as any schedule.  
+
+*finish
+
+*label good_delivery
+
+[b]Good Delivery[/b]
+
+The project is delivered on time and meets expectations. Some minor imperfections are noted, but the client is satisfied overall. The team functions well, though a few moments of friction appeared due to mismatched schedules.  
+
+You recognize areas to improve in the future, but overall, the week’s experiment in rhythm-based management has paid off. The team feels respected and productive.  
+
+*finish
+
+*label bad_delivery
+
+[b]Bad Delivery[/b]
+
+The project is delivered, but behind schedule or with notable issues. Some tasks were rushed, and a few errors slipped through. Team members show signs of fatigue and frustration, and you realize your alignment with rhythms was inconsistent.  
+
+While you salvaged some results, the week’s lessons about timing and human energy are clear. There’s room to grow as a leader.  
+
+*finish
+
+*label disaster_delivery
+
+[b]Total Disaster[/b]
+
+The project fails. Tasks were mismanaged, deadlines missed, and the team burned out. Tension and fatigue dominated the week, and your inability to synchronize rhythms led to a collapse of both morale and results.  
+
+You reflect on the lessons painfully learned: leadership is as much about understanding people’s natural energy as it is about setting calendars.  
+
+*finish

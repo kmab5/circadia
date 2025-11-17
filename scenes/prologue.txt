@@ -1,0 +1,64 @@
+*label start_prologue
+
+The elevator doors slide open to the twelfth floor, and for a moment, you just listen. The soft whir of servers, muted footsteps across carpet, and the persistent hum of fluorescent lights blend into a familiar background rhythm. This place has been your second home for months, and now it is the stage for the most important project of your career so far.
+
+Today marks the beginning of a seven-day sprint—a high-stakes prototype the company wants to unveil by next Monday. Senior leadership calls it a breakthrough. Investors have already been teased. Your team has been hand-picked to deliver it. And you're the one responsible for leading the whole effort.
+
+You step into the open workspace where your team usually gathers. The room is still waking up: monitors blinking alive, empty mugs waiting to be filled, sticky notes left behind from late-night brainstorming. A digital clock on the wall blinks 8:07 AM, reminding you that everything is running on the calendar’s schedule whether you're ready or not.
+
+But you know something that the calendar doesn't. Work doesn’t flow like numbers on a clock. People don’t operate on identical energy curves. Every hour feels different depending on who you are, how you slept, and what kind of rhythm your body insists on following.
+
+You catch yourself thinking back to the article you skimmed over the weekend—a reminder that the human body is a system guided by internal cues, not external deadlines. It argued that every person has their own natural clock, and that productivity isn’t about discipline alone, but about when each mind shines and when it dims.
+
+Maybe that idea will matter this week. Maybe it won't.
+
+Before you can reflect further, the rest of your team trickles in.
+
+Lina appears first, bright-eyed, already sipping her first coffee. Morning energy radiates off her like a lamp.  
+Jasper arrives next with slow steps and headphones around his neck, eyes half-open, clearly not fully functional yet.  
+Amara walks in quietly, calm and composed, her expression steady as always.  
+Theo enters last—new, nervous, scanning the room as if trying to memorize how everything works.
+
+They greet you in their own ways. This is the team you’ll guide through seven demanding days.
+
+[b]And now, the first decision of the week falls on you:[/b]  
+What kind of schedule will you set for the team?
+
+It will shape how the work unfolds.  
+It will influence who thrives and who struggles.  
+And it will also nudge your own internal rhythm, whether you realize it or not.
+
+*page_break Set the Weekly Schedule
+
+You take a seat at your desk, open your planning dashboard, and prepare to lock in the structure of the entire week. Three approaches come to mind, each favoring a different natural rhythm.
+
+[b]How do you want the team to operate this week?[/b]
+
+*choice
+  #Early-start model: morning syncs, heavy focus blocks before noon, strict cutoffs in the afternoon.
+    You choose a plan built around early, high-energy starts. You trust that the team can push hard in the mornings to stay ahead of the deadline.
+    *set rhythm_lark %+30
+    *set rhythm_owl %-15
+    *set rhythm_third %+15
+    *goto prologue_end
+
+  #Late-start model: slower mornings, extended afternoon sessions, creative and technical pushes into the late evening.
+    You decide that giving the team room to ease into the day might produce better results. Work will peak later, closer to when creativity tends to spark.
+    *set rhythm_owl %+30
+    *set rhythm_lark %-15
+    *set rhythm_third %+15
+    *goto prologue_end
+
+  #Balanced-flex model: flexible hours, staggered check-ins, and a steady rhythm spread evenly throughout the day.
+    You pick a plan that trusts each team member to tune into their own rhythm. Everyone can work when they feel most productive, as long as the deliverables stay aligned.
+    *set rhythm_third %+30
+    *set rhythm_lark %+10
+    *set rhythm_owl %+10
+    *goto prologue_end
+
+*label prologue_end
+You finalize the schedule and send it out. Within a few minutes, notifications begin popping up across your screen: quiet acknowledgments from the team, a sign that the week has officially begun.
+
+Tomorrow will test the plan. Energy can shift. Personal rhythms can collide. But for now, the foundation is set.
+
+*finish Monday Blues

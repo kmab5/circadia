@@ -1,0 +1,120 @@
+*title Circadia: The Clocks We Run On
+*author kmab
+*ifid 3f40b007-e43e-44a5-a6d9-b57d73289195
+
+*scene_list
+    startup
+    prologue
+    act1_monday
+    act2_tuesday
+    act3_wednesday
+    act4_thursday
+    act5_friday
+    act6_saturday
+    act7_sunday
+    character_insights
+    epilogue
+
+*comment --- INITIAL VARIABLES ---
+*comment For cleaner structure, we load all stat creation from variables.txt
+
+*create player_name "Your Name"
+*create player_gender "Not Specified"
+*create player_age 25
+
+*create rhythm_lark 10
+*create rhythm_owl 10
+*create rhythm_third 10
+
+*create relationships_lina 30
+*create relationships_jasper 30
+*create relationships_amara 30
+*create relationships_theo 30
+*create relationships_all 30
+
+*create project_success 50  
+
+*comment --- PLAYER SETUP ---
+
+Your week begins before it even starts—on a quiet Sunday night, staring at a calendar that doesn’t care about how anyone’s body actually works.
+
+A prototype is due in seven days.
+
+A team depends on you.
+
+As you stare at the blue email screen, your eyes drift toward your last sent email and your name written under it…
+
+*choice
+    #Choose my name.
+        *input_text player_name
+        *goto gender
+    #Let the story pick a name for me.
+        *set player_name "Alex"
+        *goto gender
+
+*label gender
+Especially as a…
+
+*choice
+    #male
+        *set player_gender "male"
+        *goto intro
+    #female
+        *set player_gender "female"
+        *goto intro
+    #nonbinary
+        *set player_gender "nonbinary"
+        *goto intro
+
+*label age
+You sigh as you remember the office drama that came with being in your…
+
+*choice
+    #twenties.
+        *set player_age 20
+        *goto intro
+    #thirties.
+        *set player_age 30
+        *goto intro
+    #forties.
+        *set player_age 40
+        *goto intro
+
+
+*label intro
+[i]Well, no use overthinking it now,[/i] you think.
+
+*page_break A New Week Approaches
+
+It’s late. The building’s glass windows mirror back an image of someone already thinking a day too far ahead.
+
+You’ve led projects before, but this one carries weight:  
+A prototype that determines the company’s next quarter—and maybe your team’s future funding.
+
+Tomorrow begins the sprint.
+
+But before sleep claims you, one thought gnaws at your mind:
+
+[i]How do I structure the week?[/i]
+
+The calendar offers several approaches, and each one quietly leans toward a different kind of daily rhythm.
+
+*choice
+    #A strict early-morning structure for everyone. (Daily 8am syncs, heavy planning before noon.)
+        *set rhythm_lark %+40
+        *goto intro2
+
+    #A late-start schedule that accommodates deep-night productivity. (Flexible mornings, major work after sunset.)
+        *set rhythm_owl %+40
+        *goto intro2
+
+    #A balanced schedule with predictable cycles and regular breaks. (Midday checkpoints, stable pacing.)
+        *set rhythm_third %+40
+        *goto intro2
+
+
+*label intro2
+You finalize your plan and close the laptop.  
+The week hasn’t begun, yet something tells you the calendar alone won’t be enough.
+
+*finish Plan Your Week

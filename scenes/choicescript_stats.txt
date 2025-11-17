@@ -1,0 +1,21 @@
+[b]Player Info[/b]
+*stat_chart
+    text player_name Name
+    text player_gender Gender
+    text player_age Age
+    
+
+[b]Circadian Rhythm Stats[/b]
+*stat_chart
+    percent rhythm_lark Lark
+    percent rhythm_owl Owl
+    percent rhythm_third Third Group
+
+[b]Relationships[/b]
+*stat_chart
+    percent relationships_lina Lina
+    percent relationships_jasper Jasper
+    percent relationships_amara Amara
+    percent relationships_theo Theo
+    percent relationships_all Team Unity
+    

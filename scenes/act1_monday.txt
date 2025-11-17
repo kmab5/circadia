@@ -1,0 +1,126 @@
+*label act1_monday
+
+The week begins with a quiet hum across the office. The kind of quiet that comes before something large, something heavy, something that people will remember later on—either with pride or with a tired groan. The prototype is due in seven days, and no matter how you look at it, seven days never feels like enough.
+
+You take a long breath as you arrive at your desk. The project board shines on your screen: tasks, deadlines, color-coded urgency tags, and a blinking reminder that today is your chance to set the tone for the entire week.
+
+You know your team. You’ve worked with them long enough to trust their strengths, even if you don’t always understand their timing. Lina arrives energized at dawn but fades by mid-day. Jasper stumbles through the morning but becomes razor-sharp once the sun sets. Amara is steady and calm, though she always withdraws at noon to work alone. Theo is a wildcard—eager, flexible, but unpredictable.
+
+The calendar, of course, cares nothing for any of this.
+
+Before the first meeting of the week, you need to decide how the schedule will be run. Different structures emphasize different kinds of energy, and depending on what you choose, you set the groundwork for the entire week.
+
+[b]How do you shape Monday’s schedule?[/b]
+
+*choice
+  #A strict morning-focused structure. Early stand-ups, early check-ins, early targets.
+    You decide that if momentum begins early, it will carry the team through the harder parts of the week. You set a mandatory sync at 8 AM sharp, outline deliverables that must be pushed before lunch, and mark afternoons only for review.
+
+    Lina beams when she sees the schedule. Jasper winces. Amara nods politely but says nothing. Theo gives you a small thumbs-up, unsure whether he's agreeing or just being agreeable.
+
+    *set rhythm_lark %+15
+    *set relationships_lina %+25
+    *set relationships_jasper %-25
+    *set project_success %+10
+    *goto monday_start
+
+  #An evening-anchored plan. Light mornings, heavy push after 6 PM.
+    You build the day around deep-work blocks beginning late in the afternoon and stretching well into the evening. Morning meetings are kept minimal, with the expectation that people warm up at their own pace.
+
+    Jasper looks relieved. Lina gives you a hesitant glance, as if she’s already doing the math of how exhausted she’ll be by nightfall. Amara simply writes the new schedule into her notebook. Theo looks almost excited by the flexibility.
+
+    *set rhythm_owl %+15
+    *set relationships_jasper %+25
+    *set relationships_lina %-25
+    *set project_success %+10
+    *goto monday_start
+
+  #A balanced, predictable schedule. Three rhythm windows: morning, midday, evening.
+    You choose a structure that tries to distribute the weight of the day across multiple peaks: morning planning, midday independent work, and an evening collaborative block. It’s your attempt to respect varied energy curves without abandoning the calendar altogether.
+
+    Lina approves of the morning start. Jasper grudgingly accepts the evening collaboration. Amara seems genuinely pleased that the midday block is left quiet. Theo settles into it easily, as if he were made for shifting structures.
+
+    *set rhythm_third %+15
+    *set relationships_amara %+25
+    *set project_success %+5
+    *goto monday_start
+
+
+*label monday_start
+
+The Monday morning meeting begins, and immediately you can feel the mismatches. Lina is bright and engaged, offering ideas before anyone else finishes speaking. Jasper is half-awake, staring at his screen like it’s speaking a language he doesn't understand. Amara listens patiently, writing down each point. Theo watches everyone, almost curiously, like he’s trying to decode a pattern no one else sees.
+
+Once the meeting ends, you roll out the first task assignments. Today is straightforward: concept refinement, core engineering setup, interface drafting, and resource projections. Each of these tasks can be approached at any time of day, but your schedule pressures them toward certain hours.
+
+[b]How do you personally begin your day?[/b]
+
+Your own energy has its own rhythm, and the choices you make now will quietly shape your alignment through the week.
+
+*choice
+  #You dive into work immediately, pushing hard through the morning.
+    You open the first task, fingers already moving, determined to keep things moving. It feels productive, almost invigorating, even if the pressure is heavier than you'd like this early.
+
+    *set rhythm_lark %+10
+    *set project_success %+5
+    *goto monday_assignments
+
+  #You take the morning slowly and save your real focus for the evening.
+    You review tasks at an easy pace, letting your mind warm up. You know your clarity tends to hit you later in the day, and you’re not ashamed to lean into it.
+
+    *set rhythm_owl %+10
+    *set project_success %+5
+    *goto monday_assignments
+
+  #You work in short, controlled intervals across the day.
+    You map out a day of cycles: 90 minutes of focus, 20 minutes of rest. You try to match the natural ebb and flow of your attention, resisting the urge to push too hard at any single point.
+
+    *set rhythm_third %+10
+    *set project_success %+5
+    *goto monday_assignments
+
+
+*label monday_assignments
+
+As the morning unfolds, the team begins drifting into their natural rhythms, whether your schedule matches them or not. You can already sense the beginnings of subtle friction—nothing dramatic yet, but the kind of small tension that grows if ignored.
+
+Lina finishes her first draft early but looks frustrated that no one else is ready to respond. Jasper barely gets his development environment open before lunch approaches. Amara remains steady, completing tasks at her own measured pace. Theo bounces between them, trying to help wherever he can.
+
+[b]How do you respond to the uneven progress?[/b]
+
+*choice
+  #Push everyone to align with the scheduled pace, even if it strains some of them.
+    You insist that the team hold to the calendar and push through the mismatches. The logic is solid: deadlines don’t soften just because someone is tired. Still, you can feel the mood shift.
+
+    *set relationships_jasper %-15
+    *set relationships_lina %-10
+    *set relationships_amara %-10
+    *set project_success %+5
+    *goto monday_mid
+
+  #Adapt the workflow slightly to match people’s current energy levels.
+    You make small adjustments: giving Lina quick-turn feedback while she’s at her peak, delaying Jasper’s heavier tasks until later, letting Amara process things in her usual cadence. Theo appreciates the structure you give him.
+
+    *set relationships_lina %+5
+    *set relationships_jasper %+5
+    *set relationships_amara %+5
+    *goto monday_mid
+
+  #Leave the mismatches alone and observe for now.
+    You decide to watch quietly. Let the day play out. Maybe these tensions will teach you more than interventions would.
+
+    Lina seems slightly uneasy. Jasper is relieved. Amara seems to appreciate that you aren’t forcing anything. Theo observes you the same way he watches everyone else—curious, filing away impressions.
+
+    *set relationships_amara %+5
+    *set project_success %-10
+    *goto monday_mid
+
+
+*label monday_mid
+
+By early afternoon, the strain becomes visible. The early morning push begins to catch up to some team members, while others only now start to wake up properly. The day ends on a strange imbalance: not a failure, but not smooth either.
+
+You glance over the project timeline again. Seven days. So much can go wrong—or right—in that window.
+
+Monday winds down with the uneasy sense that something deeper is at play in the group’s rhythm, something beyond task lists and deadlines.
+
+*finish

@@ -1,0 +1,26 @@
+*label epilogue
+
+The office is quiet now, bathed in the soft glow of evening. The week has ended, the prototype delivered, and the team begins to disperse, each person reflecting on their own journey. You take a moment to look around, noticing the subtle changes—not just in the project, but in how everyone operates.
+
+[b]The Team[/b]
+
+@{(relationships_lina > 70) Lina smiles as she packs her sketches, energized by mornings where her creativity was fully supported. | Lina frowns as she gathers her stuff, having decided her creative mind would be appreciated in another team. }  @{(relationships_jasper > 70) Jasper stretches, content after finally having the space to solve problems in his own rhythm. | Jasper sits at his desk quietly, occasionally looking your way with tired, angry eyes. He is going to be kicked off the team thanks to his nightly behavior. }  @{(relationships_amara > 70) Amara quietly reviews the day’s work, satisfied with her steady, reliable progress. | No one noticed when Amara left, but apparently this project was so stressful, she had decided to quit the job. }  @{(relationships_theo > 70) Theo bounces around, adaptable as ever, pleased to see the team flow in sync. | You spy Theo in the corner with his arms folded, looking at you disapprovingly. }  @{(relationships_all > 70) Despite the ups and downs of the week, the rest of the team seemed to like working with each other. | As the team members leave, you witness not only one venomous glances thrown around. They definitely work together anymore. } 
+
+[b]Your Growth[/b]
+
+You realize that leadership isn’t merely managing schedules or enforcing deadlines—it’s about understanding energy, timing, and human nature. Your own rhythm has revealed strengths and limits, and adapting to the team has strengthened both relationships and results. 
+
+You’ve learned that success isn’t measured only by outcomes, but by harmony: how well you can guide, adjust, and synchronize without forcing uniformity.  
+
+[b]The Lessons[/b]
+
+- People perform best when they are aligned with their natural energy cycles.  
+- Flexibility and observation are as important as planning.  
+- Empathy and trust strengthen both relationships and productivity.  
+- Leadership is about synchronization, not control.  
+
+As you leave the office, you feel a quiet sense of accomplishment. The week was intense, challenging, and enlightening. You’ve not only delivered a project—you’ve discovered the rhythm of people, and in the process, your own.  
+
+Tomorrow begins a new week, but you carry forward these lessons, confident in your ability to lead, adapt, and thrive.
+
+*ending

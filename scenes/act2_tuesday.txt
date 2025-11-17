@@ -1,0 +1,71 @@
+*label act2_tuesday
+
+You wake up to the soft glow of the city outside your window, but the weight of yesterday still lingers. The Monday schedule, your first attempt to structure everyone's work around assumed productivity, left you with mixed results. 
+
+The morning meeting is looming, and you notice a hint of tension as you enter the room. Lina looks drained, rubbing her temples. Jasper is yawning loudly, slouched in his chair, clearly still on night mode. Amara has her notebook open, pen poised, calm as ever, while Theo hums quietly to himself, seemingly unconcerned by the chaos around him.
+
+"Morning," you say, trying to sound upbeat. "Let's get through the updates quickly. I want to see how far we've come."
+
+Lina snaps back more sharply than usual. "I barely had time to finish the first sketches before the sync. I need space in the mornings to think!"
+
+Jasper yawns again. "Maybe if some of us weren't chained to morning meetings, we’d actually get things done."
+
+Amara looks between you and the others, serene but firm. "Perhaps our schedules are misaligned. Productivity isn’t about forcing energy—it’s about timing."
+
+Theo leans forward, curious. "You mean like… body clocks?" His eyes light up. "Everyone has their rhythm, right?"
+
+You nod slowly, realizing he’s right. Yesterday’s attempts to force uniformity have created tension and inefficiency. 
+
+*choice
+    #Confront the team and insist on sticking to the current schedule.
+        You raise your voice slightly, trying to assert authority. "We have deadlines. We must follow the plan." 
+        *set project_success %-5
+        *set relationships_lina %-5
+        *set relationships_jasper %-5
+        *goto tuesday_afternoon
+    #Acknowledge the mismatches and propose a small experiment to test each person's optimal times.
+        You take a deep breath. "Perhaps we're approaching this wrong. Let's try experimenting with different work periods and see who performs best at different times."
+        *set project_success %+5
+        *set relationships_lina %+5
+        *set relationships_jasper %+5
+        *goto tuesday_afternoon
+    #Ask Theo to observe and report on each member's energy patterns.
+        "Theo, can you keep notes on when everyone seems most productive?" you suggest. "It might help us understand how to schedule tasks better." 
+        *set project_success %+2
+        *set relationships_theo %+5
+        *goto tuesday_afternoon
+
+*label tuesday_afternoon
+
+By the afternoon, the office feels heavy with frustration. Code reviews pile up faster than anyone can handle, and creative assets are still lagging behind. You notice Lina quietly scrolling through her tablet, her eyes drooping, clearly exhausted from trying to push past her peak energy window.
+
+Jasper, on the other hand, seems to have a spark in his eyes now that the sun is lowering. His brilliance is undeniable, but it arrives too late to salvage the morning’s work. Amara sits in her corner, steadily progressing but isolated, absorbed in her midday solitude.
+
+Theo sidles up to you. "I think I’ve got a sense of how everyone works," he whispers. "Lina is strongest early, Jasper peaks at night, Amara is steady midday, and I can adapt to anything. Maybe you should consider reassigning tasks?"
+
+*choice
+    #Ignore Theo’s advice and push the team harder.
+        You shake your head. "We can't afford experiments. We follow the schedule." 
+        *set project_success %-5
+        *set relationships_amara %-2
+        *set relationships_theo %-5
+        *goto end_of_tuesday
+    #Reassign tasks according to each member’s peak times.
+        "Alright," you decide. "Let's try matching tasks to energy peaks. Lina, focus on early creative drafts. Jasper, take on complex problem-solving after hours. Amara, steady analytics around midday. Theo, assist where needed." 
+        *set project_success %+10
+        *set relationships_lina %+5
+        *set relationships_jasper %+5
+        *set relationships_amara %+5
+        *set relationships_theo %+5
+        *goto end_of_tuesday
+    #Hold a quick debrief to discuss everyone’s preferred rhythm.
+        You call the team together. "I want everyone to share their natural work patterns. It might help us plan better." 
+        *set project_success %+5
+        *set relationships_all %+3
+        *goto end_of_tuesday
+
+*label end_of_tuesday
+
+The day ends with a mixture of relief and lingering tension. You understand now that your role isn’t just assigning tasks—it’s learning the rhythms that make your team thrive. As you leave the office, you feel the first twinges of respect for the clockwork of human energy.
+
+*finish

@@ -1,0 +1,76 @@
+*label act3_wednesday
+
+The midweek sun streams through the office windows, but the air feels heavier than usual. Monday's mismatched schedule and Tuesday’s minor adjustments have left the team teetering on the edge of exhaustion.
+
+You arrive early, trying to check on Lina first. She’s curled over her sketches, eyelids drooping. You can tell she’s running on empty—her energy window has long passed. 
+
+Lina glances up, frustration and fatigue written across her face. "I just… I can’t keep up if I have to push through mornings I’m not awake for," she admits quietly to Theo, who is perched nearby, quietly taking notes. "I do my best work before the sun even thinks of growing tired."
+
+*choice
+    #Offer Lina a flexible schedule to work when she’s most alert.
+        "Lina," you say gently, "focus on your early morning bursts. Take the rest of the day off to recharge. I’ll make sure your tasks fit your rhythm." 
+        *set relationships_lina %+10
+        *set project_success %+5
+        *goto morning_checkins
+    #Insist she stick to the standard schedule.
+        "We can’t rearrange everything for one person," you reply, trying to mask your worry. 
+        *set relationships_lina %-10
+        *set project_success %-5
+        *goto morning_checkins
+    #Ask the whole team about their energy patterns.
+        "I think it’s time we openly map our rhythms," you suggest. "Everyone, when do you feel most effective?" 
+        *set relationships_all %+5
+        *set project_success %+5
+        *goto morning_checkins
+
+*label morning_checkins
+
+By mid-morning, Jasper is moving sluggishly. He barely reacts to reminders and seems mentally distant. Theo whispers, "He’s still on night mode. We should let him do his deep thinking later."
+
+Amara, predictably, is calm and steady. She has settled into her midday work groove, productive as always, but she keeps to herself. You notice her glancing at the clock occasionally—her solitude window matters.
+
+You start realizing something fundamental: productivity isn’t just about assigning tasks; it’s about timing them according to individual energy clocks. 
+
+*choice
+    #Reassign Jasper’s tasks to later in the day when his energy peaks.
+        You nod to Theo. "Jasper, tackle the most complex problems tonight. Focus on coding later. We'll adjust the schedule for him." 
+        *set relationships_jasper %+10
+        *set project_success %+5
+        *goto afternoon_reflection
+    #Push Jasper to keep up with the current schedule.
+        "We need results now," you insist, ignoring the warning signs. 
+        *set relationships_jasper %-10
+        *set project_success %-5
+        *goto afternoon_reflection
+    #Split Jasper’s work into small manageable tasks throughout the day.
+        "Let’s break tasks into smaller parts, Jasper," you suggest. "Do what you can now, and save the heavy lifts for later." 
+        *set relationships_jasper %+5
+        *set project_success %+3
+        *goto afternoon_reflection
+
+*label afternoon_reflection
+
+The afternoon brings a strange quiet to the office. Lina has left for a brief rest, Jasper is slowly gaining focus, and Amara remains steady. Theo looks up from his notebook. "You’re learning fast," he says. "It’s all about synchronization—when you align tasks with people’s clocks, things run smoother."
+
+You lean back, absorbing the truth. The calendar isn’t the master; the human clock is. And the next few days will test your ability to synchronize the team effectively, including yourself.  
+
+*choice
+    #Spend the rest of the day planning individualized schedules for the team.
+        You pull out a notepad and start mapping the energy peaks and tasks for each member. "If I get this right, we might still hit the deadline," you murmur. 
+        *set project_success %+5
+        *goto end_of_wednesday
+    #Take the afternoon to rest and observe, reflecting on what you’ve learned.
+        You lean back in your chair, letting the patterns reveal themselves. Observation can be as powerful as action. 
+        *set project_success %+3
+        *goto end_of_wednesday
+    #Push everyone to work at their current pace, ignoring the new insights.
+        You glance around the room. "Let’s keep going. We have no time for experiments." 
+        *set project_success %-5
+        *set relationships_all %-3
+        *goto end_of_wednesday
+
+*label end_of_wednesday
+
+As the workday ends, you feel the first tangible sense of clarity. Understanding rhythms is more than a strategy; it is the key to your team’s success. The project is still behind, but you now know how to move forward.
+
+*finish

@@ -1,0 +1,37 @@
+*label character_insights
+
+The office is quiet now, and you take a moment to reflect. The past week has tested not only your leadership, but your own natural rhythms. Your choices, the times you pushed yourself, rested, or adapted, have shaped the person you revealed to yourself and your team.
+
+*if (rhythm_lark >= rhythm_owl) and (rhythm_lark >= rhythm_third)
+    [b]Early Bird Lark[/b]
+
+    You’ve discovered a strong affinity for early activity. Mornings energize you, clarity strikes when the world is still waking. You think best with sunlight streaming through the windows, tackling strategic and creative challenges first thing. Your leadership thrives when you act during your peak hours, guiding the team with precision and inspiration before fatigue sets in.  
+    *goto reflection
+
+*elseif (rhythm_owl >= rhythm_lark) and (rhythm_owl >= rhythm_third)
+    [b]Night Owl[/b]
+
+    You shine in the quiet hours of late afternoon and evening. Complex problems, deep thinking, and coding challenges feel effortless when most have slowed. Your energy builds as the day winds down, and your leadership style relies on careful, focused decisions at your own optimal time. You’ve learned to trust your rhythm, letting early chaos flow around you while saving your brilliance for critical moments.  
+    *goto reflection
+
+*elseif (rhythm_third >= rhythm_lark) and (rhythm_third >= rhythm_owl)
+    [b]Third-Type Steady Worker[/b]
+
+    Consistency is your strength. You thrive in steady, predictable cycles, balancing work and rest in a rhythm that avoids peaks and crashes. Your calm, measured approach allows you to handle multiple responsibilities simultaneously. The team respects your reliability, and you’ve learned that thoughtful pacing can be as powerful as bursts of high energy.  
+    *goto reflection
+
+*else
+    [b]Mixed Adaptive Type[/b]
+
+    Your choices reveal a flexible and adaptive rhythm. You move fluidly between peaks and lulls, adjusting your energy to the needs of the team. While this versatility can be exhausting, it allows you to synchronize dynamically with everyone around you. You are a bridge between extremes, capable of understanding and responding to Larks, Owls, and steady types alike.  
+    *goto reflection
+
+*label reflection
+
+[b]Reflection[/b]
+
+Regardless of type, one truth is clear: understanding your own rhythm—and that of those around you—is key to both personal effectiveness and team success. Over the week, you’ve not only managed tasks, but learned to respect energy, timing, and the subtle forces that drive people’s productivity.  
+
+You feel more aware, not just of your own abilities, but of how leadership is about empathy and synchronization as much as strategy and deadlines.
+
+*finish

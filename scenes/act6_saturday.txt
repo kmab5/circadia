@@ -1,0 +1,83 @@
+*label act6_saturday
+
+Saturday arrives quietly. The office is mostly empty, but a few determined team members trickle in. You notice how the past days’ adjustments have shifted the atmosphere: focus and productivity are stronger, tension lower, and the team seems more attuned to their own energy cycles.  
+
+Today is about you. Your own rhythm—the Lark, Owl, or Third tendencies—will determine how effectively you can guide the team through the final stretch. Your choices will either synchronize or misalign the project entirely.  
+
+*choice
+    #Follow a morning-focused, Lark-style schedule.
+        You rise early, energized by the quiet office. You tackle high-priority creative and planning tasks first, matching Lina’s early rhythm. 
+        *set rhythm_lark %+10
+        *set project_success %+5
+        *goto morning_alignment
+    #Follow a night-focused, Owl-style schedule.
+        You take the morning slow, conserving energy, and plan to tackle complex problem-solving later in the evening, aligning with Jasper. 
+        *set rhythm_owl %+10
+        *set project_success %+5
+        *goto morning_alignment
+    #Follow a steady, midday-focused Third-type schedule.
+        You focus on calm, consistent progress throughout the day, reserving peak effort for predictable work cycles, like Amara. 
+        *set rhythm_third %+10
+        *set project_success %+5
+        *goto morning_alignment
+    #Experiment with a mixed, flexible schedule to adapt to the team.
+        You decide to flow with the team, moving between tasks as needed and following each member’s peak energy window. 
+        *set rhythm_lark %+5
+        *set rhythm_owl %+5
+        *set rhythm_third %+5
+        *set project_success %+7
+        *goto morning_alignment
+
+*label morning_alignment
+
+You spend the morning observing the team and adjusting tasks in real-time. The difference is striking: when you align your own peak energy with the team’s rhythm, progress accelerates. When you force yourself against your natural clock, friction increases subtly.  
+
+*choice
+    #Focus on coaching Lina and Theo during their peak periods.
+        You spend time mentoring Lina early in the morning and guiding Theo wherever needed. They respond with enthusiasm and efficiency. 
+        *set relationships_lina %+5
+        *set relationships_theo %+5
+        *set project_success %+5
+        *goto afternoon_alignment
+    #Focus on coding with Jasper in the evening.
+        You plan to tackle technical challenges side-by-side with Jasper during his peak nighttime window. 
+        *set relationships_jasper %+5
+        *set project_success %+5
+        *goto afternoon_alignment
+    #Work steadily alongside Amara throughout the day.
+        You settle into calm, analytical tasks with Amara, matching her steady pace. 
+        *set relationships_amara %+5
+        *set project_success %+5
+        *goto afternoon_alignment
+    #Split your focus between all team members, adapting dynamically.
+        You move fluidly between coaching, coding, and analyzing, responding to whichever team member’s rhythm requires attention. 
+        *set relationships_all %+5
+        *set project_success %+7
+        *goto afternoon_alignment
+
+*label afternoon_alignment
+
+By mid-afternoon, the office hums like a well-tuned machine. The team is in sync, and you notice subtle improvements in quality and speed. Theo’s adaptive approach fills in gaps seamlessly, while Amara’s consistent analysis keeps the project steady.  
+
+Lina and Jasper now work at opposite ends of the day but complement each other perfectly, and you’ve found a rhythm that allows everyone, including yourself, to contribute without burnout.  
+
+*choice
+    #Push for final adjustments before the weekend ends.
+        "Let’s make the last tweaks now," you suggest. Everyone rallies, and productivity peaks. 
+        *set project_success %+10
+        *goto end_of_saturday
+    #Allow the team to rest and continue fresh tomorrow.
+        "We’ve done enough today," you decide. "Rest now, and we’ll finish strong tomorrow." 
+        *set project_success %+5
+        *goto end_of_saturday
+    #Micromanage the final afternoon, trying to optimize every detail.
+        You hover over tasks, making constant corrections. Some work improves, but stress rises. 
+        *set project_success %-5
+        *set relationships_all %-5
+        *goto end_of_saturday
+
+*label end_of_saturday
+
+As the day ends, you feel a profound sense of understanding. Synchronization isn’t just about scheduling; it’s about respecting the natural rhythms of everyone—including yourself. Tomorrow, the ultimate test awaits: delivery day.  
+
+*finish
